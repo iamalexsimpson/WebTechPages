@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Fruit Machine</title>
+    
+	<script>
+        function loadup() {
+            var sCreds = document.getElementById("Credits").innerText;
+            var sCreds = 0;
+            var iCreds = parseInt(sCreds);
+            document.getElementById("Credits").innerText = iCreds;
+
+            var sWinnings = document.getElementById("Winnings").innerText;
+            var sWinnings = 0;
+            var iWinnings = parseInt(sWinnings);
+            document.getElementById("Winnings").innerText = iWinnings;
+        }
+
+        function addcredit() {
+            var sCreds = document.getElementById("Credits").innerText;
+            var iCreds = parseInt(sCreds);
+            
+            var iNewCreds = iCreds + 1;
+
+            document.getElementById("Display").innerText = "Credit +1";
+            document.getElementById("Credits").innerText = iNewCreds;
+        }
+
+        function spinwheel() {
+            document.getElementById("Display").innerText = "-";
+
+            var Slot1 = 1;
+            var Slot2 = 2;
+            var Slot3 = 3;
+
+            var min = 1;
+            var max = 7;
+
+            var sCreds = document.getElementById("Credits").innerText;
+            var iCreds = parseInt(sCreds);
+
+            var sWinnings = document.getElementById("Winnings").innerText;
+            var iWinnings = parseInt(sWinnings);
+            
+            if (iCreds == 0) {
+                document.getElementById("Display").innerText = "Need Credits";
+            }
+            else {
+                var iNewCreds = iCreds - 1;
+            document.getElementById("Credits").innerText = iNewCreds;
+            
+            var Slot1 = Math.random() * (max - min + 1) + min;
+            var Slot2 = Math.random() * (max - min + 1) + min;
+            var Slot3 = Math.random() * (max - min + 1) + min;
+            var iSlot1 = Slot1.toFixed(0);
+            var iSlot2 = Slot2.toFixed(0);
+            var iSlot3 = Slot3.toFixed(0);
+
+            document.getElementById("Slot1").innerText = iSlot1;
+            document.getElementById("Slot2").innerText = iSlot2;
+            document.getElementById("Slot3").innerText = iSlot3;
+            
+
+            if (iSlot1 == 1){
+                document.getElementById("Slot1").src ="fruitimages/apple.png";
+            }
+            else if (iSlot1 == 2){
+                document.getElementById("Slot1").src ="fruitimages/banana.png";
+            }
+            else if (iSlot1 == 3){
+                document.getElementById("Slot1").src ="fruitimages/bar.png";
+            }
+            else if (iSlot1 == 4){
+                document.getElementById("Slot1").src ="fruitimages/cherries.png";
+            }
+            else if (iSlot1 == 5){
+                document.getElementById("Slot1").src ="fruitimages/grapes.png";
+            }
+            else if (iSlot1 == 6){
+                document.getElementById("Slot1").src ="fruitimages/lemon.png";
+            }
+            else if (iSlot1 == 7){
+                document.getElementById("Slot1").src ="fruitimages/melon.png";
+            }
+            else if (iSlot1 == 8){
+                document.getElementById("Slot1").src ="fruitimages/orange.png";
+            }
+
+            if (iSlot2 == 1){
+                document.getElementById("Slot2").src ="fruitimages/apple.png";
+            }
+            else if (iSlot2 == 2){
+                document.getElementById("Slot2").src ="fruitimages/banana.png";
+            }
+            else if (iSlot2 == 3){
+                document.getElementById("Slot2").src ="fruitimages/bar.png";
+            }
+            else if (iSlot2 == 4){
+                document.getElementById("Slot2").src ="fruitimages/cherries.png";
+            }
+            else if (iSlot2 == 5){
+                document.getElementById("Slot2").src ="fruitimages/grapes.png";
+            }
+            else if (iSlot2 == 6){
+                document.getElementById("Slot2").src ="fruitimages/lemon.png";
+            }
+            else if (iSlot2 == 7){
+                document.getElementById("Slot2").src ="fruitimages/melon.png";
+            }
+            else if (iSlot2 == 8){
+                document.getElementById("Slot2").src ="fruitimages/orange.png";
+            }
+
+            if (iSlot3 == 1){
+                document.getElementById("Slot3").src ="fruitimages/apple.png";
+            }
+            else if (iSlot3 == 2){
+                document.getElementById("Slot3").src ="fruitimages/banana.png";
+            }
+            else if (iSlot3 == 3){
+                document.getElementById("Slot3").src ="fruitimages/bar.png";
+            }
+            else if (iSlot3 == 4){
+                document.getElementById("Slot3").src ="fruitimages/cherries.png";
+            }
+            else if (iSlot3 == 5){
+                document.getElementById("Slot3").src ="fruitimages/grapes.png";
+            }
+            else if (iSlot3 == 6){
+                document.getElementById("Slot3").src ="fruitimages/lemon.png";
+            }
+            else if (iSlot3 == 7){
+                document.getElementById("Slot3").src ="fruitimages/melon.png";
+            }
+            else if (iSlot3 == 8){
+                document.getElementById("Slot3").src ="fruitimages/orange.png";
+            }
+
+            if ((iSlot1 == iSlot2) && (iSlot1 == iSlot3)){
+                document.getElementById("Display").innerText = "SUPER WIN! +10";
+                var iNewWinnings = iWinnings +10;
+                document.getElementById("Winnings").innerText = iNewWinnings;
+            }
+            else if (iSlot2 == iSlot3){
+                document.getElementById("Display").innerText = "WIN! +5";
+                var iNewWinnings = iWinnings +5;
+                document.getElementById("Winnings").innerText = iNewWinnings;
+            }
+            else{
+                document.getElementById("Display").innerText = "Try again..";
+            }
+          } 
+        }
+
+        function collect() {
+            var sWinnings = document.getElementById("Winnings").innerText;
+            var iWinnings = parseInt(sWinnings);
+
+            if (iWinnings == 0){
+                document.getElementById("Display").innerText = "No winnings..";
+            }
+            else {
+            document.getElementById("Display").innerText = "Credits Added";
+            var sCreds = document.getElementById("Credits").innerText;
+            var iCreds = parseInt(sCreds);
+
+            var sWinnings = document.getElementById("Winnings").innerText;
+            var iWinnings = parseInt(sWinnings);
+
+            var iNewCreds = iCreds + iWinnings;
+            document.getElementById("Credits").innerText = iNewCreds;
+
+            var iNewWinnings = iWinnings - iWinnings;
+            document.getElementById("Winnings").innerText = iNewWinnings;
+            }
+        }
+        
+            
+    
+    </script>
+
+	<link rel="stylesheet" href="css/slotstyles.css?v=1.0">
+</head>
+<body onload="loadup()">
+	<div class="grid-container">
+        <div class="label1">Credits</div>
+        <div class="label2">Winnings</div>
+        <div class="item1"><p id="Credits"></p></div>
+        <div class="item2"><p id="Winnings"></p></div>
+        <div class="item3"><img id = "Slot1"></div>
+        <div class="item4"><img id = "Slot2"></div>
+        <div class="item5"><img id = "Slot3"></div>
+        <div class="item6"><p id="Display">-</p></div>
+        <div class="item7"><button onclick="addcredit()">Add Credit</button></div>
+        <div class="item8"><button onclick="spinwheel()">SPIN!</button></div>
+        <div class="item9"><button onclick="collect()">Collect</button></div>
+    </div>
+</body>
+</html>
