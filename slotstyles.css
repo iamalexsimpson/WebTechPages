@@ -1,0 +1,122 @@
+html, body {
+    
+    width: 643px;
+    height: 888px;
+}
+
+html {
+    vertical-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 643px;
+    height: 701px;
+  }
+  
+
+.label1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    grid-column: 1;
+    grid-row: 1;
+    }
+
+.label2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    grid-column: 3;
+    grid-row: 1;
+    }
+
+.item1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 1;
+    grid-row: 2;
+    
+  }
+  
+.item2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 3;
+    grid-row: 2;
+   
+  }
+  
+.item3 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+.item4 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+.item5 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+.item6 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 2;
+    grid-row:4;
+  }
+
+.item7 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+.item8 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+.item9 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    grid-column: 3;
+    grid-row: 5;
+  }

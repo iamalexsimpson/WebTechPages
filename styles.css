@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+li {list-style-type: none;
+    font-size: 10pt;
+    color: red;
+}
+
+h2{
+    
+}
